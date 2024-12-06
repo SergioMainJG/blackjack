@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/card-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css" />
+    <title>blackjack</title>
+  </head>
+  <body>
+    <header class="titles-content">
+      <h1>🃏Black Jack🃏</h1>
+      <h2>Welcome to my game!</h2>
+    </header>
+    <main class="main-content">
+      <aside class="explanations-container">
+        <h3 class="rules-title">The rules are the next:</h3>
+        <ul class="rules">
+          <li class="rule">
+            <h4>Your goal is reach or to be near to 21</h4>
+          </li>
+          <li class="rule">
+            <h4>If your score is major than 21, then you will lose</h4>
+          </li>
+          <li class="rule">
+            <h4>
+              If you are near than 21 but your opponent score is 21 or a value
+              between your score and 21, you will lose!
+            </h4>
+          </li>
+          <li class="rule">
+            <h4>
+              If your opponent and you gain the same score, then will be a tie
+            </h4>
+          </li>
+        </ul>
+        <table class="table-cards">
+          <th class="table-cards-head">
+            <h3>Cards' Value</h3>
+            <h4>In this game, don't mind about the suit of the card</h4>
+          </th>
+          <tr class="table-row-cards">
+            <td>Card</td>
+            <td>Value</td>
+          </tr>
+          <tr class="table-row-cards">
+            <td>
+              <img class="sample-card" src="imgs/cards/AC.avif" alt="As" />
+            </td>
+            <td>1</td>
+          </tr>
+          <tr class="table-row-cards">
+            <td>
+              <img
+                class="sample-card"
+                src="imgs/cards/2C.avif"
+                alt="2-clover"
+              />
+            </td>
+            <td>2</td>
+          </tr>
+          <tr class="table-row-cards">
+            <td>
+              <img
+                class="sample-card"
+                src="imgs/cards/3C.avif"
+                alt="3-clover"
+              />
+            </td>
+            <td>3</td>
+          </tr>
+          <tr class="table-row-cards">
+            <td>
+              <img
+                class="sample-card"
+                src="imgs/cards/4C.avif"
+                alt="4-clover"
+              />
+            </td>
+            <td>4</td>
+          </tr>
+          <tr class="table-row-cards">
+            <td>
+              <img
+                class="sample-card"
+                src="imgs/cards/5C.avif"
+                alt="5-clover"
+              />
+            </td>
+            <td>5</td>
+          </tr>
+          <tr class="table-row-cards">
+            <td>
+              <img
+                class="sample-card"
+                src="imgs/cards/6C.avif"
+                alt="6-clover"
+              />
+            </td>
+            <td>6</td>
+          </tr>
+          <tr class="table-row-cards">
+            <td>
+              <img
+                class="sample-card"
+                src="imgs/cards/7C.avif"
+                alt="7-clover"
+              />
+            </td>
+            <td>7</td>
+          </tr>
+          <tr class="table-row-cards">
+            <td>
+              <img
+                class="sample-card"
+                src="imgs/cards/8C.avif"
+                alt="8-clover"
+              />
+            </td>
+            <td>8</td>
+          </tr>
+          <tr class="table-row-cards">
+            <td>
+              <img
+                class="sample-card"
+                src="imgs/cards/9C.avif"
+                alt="9-clover"
+              />
+            </td>
+            <td>9</td>
+          </tr>
+          <tr class="table-row-cards">
+            <td>
+              <img
+                class="sample-card"
+                src="imgs/cards/10C.avif"
+                alt="10-clover"
+              />
+              <img
+                class="sample-card card-ten"
+                src="imgs/cards/JC.avif"
+                alt="jack-clover"
+              />
+              <img
+                class="sample-card card-ten"
+                src="imgs/cards/QC.avif"
+                alt="queen-clover"
+              />
+              <img
+                class="sample-card card-ten"
+                src="imgs/cards/KC.avif"
+                alt="king-clover"
+              />
+            </td>
+            <td>10</td>
+          </tr>
+        </table>
+      </aside>
+      <section class="game-table" id="game-table">
+        <button
+          class="button start-game"
+          type="button"
+          aria-describedby="Start the blackjack games"
+          id="start-game"
+        >
+          Start Game
+        </button>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <h5>Creditos: Sergio Elias Arce Roldán</h5>
+      <h5>
+        Código fuente:
+        <a
+          aria-describedby="codigo fuente"
+          rel="noopener"
+          target="_blank"
+          href="https://github.com/SergioMainJG/blackjack"
+        >
+          SergioMainJG - Github
+        </a>
+      </h5>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
