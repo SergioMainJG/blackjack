@@ -1,8 +1,8 @@
-import { PlayerDecorator } from "./player.entity";
+import { PlayerComponent, PlayerDecorator } from '@blackjack/index';
 
 export class PlayerIA extends PlayerDecorator {
 
-    constructor(player: PlayerDecorator) {
+    constructor(player: PlayerComponent) {
         super(player);
     }
 

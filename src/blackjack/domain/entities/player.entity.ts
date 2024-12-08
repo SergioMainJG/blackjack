@@ -1,6 +1,6 @@
 import { PlayerComponent } from "./player";
 
-export class PlayerDecorator implements PlayerComponent {
+export abstract class PlayerDecorator implements PlayerComponent {
 
     constructor(
         protected player: PlayerComponent

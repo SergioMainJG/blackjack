@@ -78,11 +78,15 @@ body {
 }
 .table-cards {
   width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 .table-cards-head {
   font-size: 1rem;
   text-align: center;
   margin: 0;
+  width: 100%;
 }
 .table-cards-head > h3,
 .table-cards-head > h4 {
@@ -100,13 +104,14 @@ body {
   object-fit: cover;
   rotate: 15deg;
   filter: drop-shadow(5px 7px 10px black);
-  will-change: width, rotate, filter;
-  transition: width 350ms, rotate 500ms, filter 200ms;
+  will-change: width, rotate, filter, z-index;
+  transition: width 350ms, rotate 500ms, filter 200ms, z-index 1ms;
 }
 .sample-card:hover {
   width: 20%;
   rotate: 0deg;
   filter: drop-shadow(0 0 15px var(--red));
+  z-index: 10;
 }
 .button {
   border-radius: 8px;
@@ -123,12 +128,14 @@ body {
   color: black;
   border: 2px solid hsl(220, 81%, 33%);
   visibility: visible;
-  filter: drop-shadow(5px 7.5px 7px black);
-  will-change: filter, background-color, color, border;
-  transition: filter 200ms, background-color 500ms, color 1000ms;
+  filter: drop-shadow(5px 7.5px 10px black);
+  will-change: filter, background-color, color, border, font-size, width, height;
+  transition: filter 200ms, background-color 500ms, color 1000ms, font-size,
+    width 200ms, height 200ms, font-size 200ms;
 }
 .start-game:hover {
   filter: drop-shadow(3px 3px 3.5px black);
+  font-size: 1rem;
   background-color: var(--red);
   border: 2px solid var(--red);
   color: white;
@@ -147,7 +154,7 @@ body {
   color: white;
   background: var(--smoky-black);
 }
-.hidden{
+.hidden {
   visibility: hidden;
   pointer-events: none;
 }
