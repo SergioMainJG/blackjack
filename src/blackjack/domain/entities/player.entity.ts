@@ -1,29 +1,19 @@
+import { PlayerComponent } from "./player";
 
-type gameLogger = {
-    score: number,
-    log: 'W' | 'L' | 'T'
-}
+export class PlayerDecorator implements PlayerComponent {
 
-export class Player {
-    private _score: number = 0;
-    private _log: gameLogger[] = [];
+    constructor(
+        protected player: PlayerComponent
+    ) { }
 
-    constructor() { }
+    getScore(): number {
+        return this.player.getScore();
+    }
+    setScore(points: number): void {
+        this.player.setScore(points);
+    }
+    reset(): void {
+        this.player.reset();
+    }
 
-    get score(): number {
-        return this._score;
-    }
-    set score(points: number) {
-        this._score += points;
-    }
-    get log(): gameLogger[] {
-        return this._log;
-    }
-    set log(log: gameLogger) {
-        this._log.push(log);
-    }
-    private reset() {
-        this._score = 0;
-    }
-    
 }
