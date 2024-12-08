@@ -2,14 +2,15 @@ const specialCards = ['A', 'J', 'Q', 'K'];
 const commonCards = ['C', 'D', 'H', 'S'];
 
 export function createDeck(): string[] {
-    const deck: Set<string> = new Set();
+    const deck: string[]= [];
     for (let i = 0; i < commonCards.length; i++) {
         for (const card of specialCards) {
-            deck.add(`${card}${commonCards[i]}`);
+            deck.push(`${card}${commonCards[i]}`);
         }
-        for (let i = 2; i < 11; i++) {
-            deck.add(`${i}${commonCards[i]}`);
+        console.log( commonCards[i])
+        for (let j = 2; j < 11; j++) {
+            deck.push(`${j}${commonCards[i]}`);
         }
     }
-    return Array.from(deck);
+    return deck;
 }
