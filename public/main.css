@@ -108,7 +108,7 @@ body {
   transition: width 350ms, rotate 500ms, filter 200ms, z-index 1ms;
 }
 .sample-card:hover {
-  width: 20%;
+  width: 30%;
   rotate: 0deg;
   filter: drop-shadow(0 0 15px var(--red));
   z-index: 10;
@@ -149,10 +149,16 @@ body {
 .main-footer {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
+  gap: 1px;
   color: white;
   background: var(--smoky-black);
+  height: 100%;
+}
+.main-footer > h5{
+  margin: 5px;
 }
 .hidden {
   visibility: hidden;
