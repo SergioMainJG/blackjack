@@ -1,4 +1,4 @@
-import { PlayerComponent, PlayerDecorator } from '@blackjack/index';
+import { PlayerComponent, PlayerDecorator } from ".";
 
 export class PlayerIA extends PlayerDecorator {
 

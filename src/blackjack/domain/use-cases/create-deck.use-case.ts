@@ -7,7 +7,6 @@ export function createDeck(): string[] {
         for (const card of specialCards) {
             deck.push(`${card}${commonCards[i]}`);
         }
-        console.log( commonCards[i])
         for (let j = 2; j < 11; j++) {
             deck.push(`${j}${commonCards[i]}`);
         }
