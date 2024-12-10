@@ -111,5 +111,8 @@ export const game = () => {
         userScore.innerText = '0';
         comScore.innerText = '0';
         deck = randomizeCards(createDeck());
+        hit.classList.remove('hidden');
+        stand.classList.remove('hidden');
+        surrender.classList.remove('hidden');
     });
 }
