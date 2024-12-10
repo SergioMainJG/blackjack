@@ -25,6 +25,7 @@ export const game = () => {
     const hit: HTMLButtonElement = document.querySelector('#hit')!;
     const stand: HTMLButtonElement = document.querySelector('#stand')!;
     const surrender: HTMLButtonElement = document.querySelector('#surrender')!;
+    stand.classList.add('hidden');
     const newGame: HTMLButtonElement = document.querySelector('#newGame')!;
 
     function endGame(result: ResultGame, points: number[]) {
@@ -45,11 +46,11 @@ export const game = () => {
 
     user.setScore(getCard(deck).value);
     auxScoreCom[0] = getCard(deck).value;
+    computer.setScore( auxScoreCom[0] ); 
     let isStandPc = false;
 
     userScore.innerText = auxScoreCom[0].toString();
-    comScore.innerText = computer.getScore().toString();
-
+    comScore.innerText = auxScoreCom[1].toString();
     hit.addEventListener('click', () => {
         const pointsUser = getCard(deck);
         user.setScore(pointsUser.value);
@@ -71,6 +72,7 @@ export const game = () => {
             comCards.append(addCard(pointsPC.card));
         }
         else isStandPc = true;
+        stand.classList.remove('hidden');
     });
 
     stand.addEventListener('click', () => {
@@ -93,7 +95,6 @@ export const game = () => {
             areWinner([user.getScore(), computer.getScore()]),
             [user.getScore(), computer.getScore()]
         );
-        return;
     });
 
     surrender.addEventListener('click', () => {
@@ -112,7 +113,6 @@ export const game = () => {
         comScore.innerText = '0';
         deck = randomizeCards(createDeck());
         hit.classList.remove('hidden');
-        stand.classList.remove('hidden');
         surrender.classList.remove('hidden');
     });
 }
